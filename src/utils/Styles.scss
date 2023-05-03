@@ -1,0 +1,17 @@
+// Flex
+
+@mixin flex-center-styles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-vertical-center-styles {
+  display: flex;
+  align-items: center;
+}
+
+@mixin text-stroke($size, $color) {
+  text-shadow: $size 0 $size $color, 0 $size $size $color,
+    (-$size) 0 $size $color, 0 (-$size) $size $color;
+}
