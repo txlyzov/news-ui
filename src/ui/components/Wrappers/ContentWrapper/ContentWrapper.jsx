@@ -3,7 +3,7 @@ import React from 'react';
 
 function ContentWrapper({ children, className = '' }) {
     return (
-        <div className={`${className} content-wrapper`}>
+        <div className={`${className ? `${className} ` : ''}content-wrapper`}>
             {children}
         </div>
     );

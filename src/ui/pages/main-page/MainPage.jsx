@@ -98,7 +98,7 @@ const MainPage = observer(() => {
                                                         <h4 className="news-list__item-title">
                                                             <Link
                                                                 className="news-list__link-to-item"
-                                                                to={PATH_VARIBLES.NEWS(item.id)}
+                                                                to={PATH_VARIBLES.ROUTES.NEWS(item.id)}
                                                             >
                                                                 {`${item.title} (${timeConvertor(item.time, 1000)})`}
                                                             </Link>

@@ -1,8 +1,15 @@
 export const APP_NAME = process.env.REACT_APP_NAME;
 
+export const POPULAR_TOPIC_ID = process.env.REACT_APP_POPULAR_TOPIC_ID;
+
 export const PATH_VARIBLES = {
-  MAIN: () => `${APP_NAME}/`,
-  NEWS: (newsId) => `${APP_NAME}/news/${newsId}`,
+  NODES: {
+    NEWS_ID: "newsId",
+  },
+  ROUTES: {
+    MAIN: () => `/${APP_NAME}/`,
+    NEWS: (newsId) => `/${APP_NAME}/news/${newsId}`,
+  },
 };
 
 const HOST_SETTINGS = {
