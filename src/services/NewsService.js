@@ -24,7 +24,7 @@ export const getItemById = async (itemId) => {
 export const getItemsByIdArray = async (idsArray) => {
   try {
     const items = [];
-    const primises = idsArray.map((itemId) =>
+    const promises = idsArray.map((itemId) =>
       new Promise((resolve, reject) => {
         try {
           resolve(getItemById(itemId));
@@ -36,7 +36,7 @@ export const getItemsByIdArray = async (idsArray) => {
       })
     );
 
-    await Promise.all(primises);
+    await Promise.all(promises);
 
     return items;
   } catch (error) {

@@ -1,0 +1,16 @@
+@import "./../../../utils/Colors.scss";
+
+.comment {
+  margin: 10px;
+  min-width: 10vw;
+
+  .comment__author {
+    padding: 10px;
+    border: 1px solid $c-black-100;
+
+    .comment__author-link {
+      color: $c-red-100;
+      text-decoration: none;
+    }
+  }
+}
