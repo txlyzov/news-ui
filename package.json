@@ -1,5 +1,6 @@
 {
-  "name": "hacker-news-ui",
+  "homepage": "https://txlyzov.github.io/news-ui",
+  "name": "news-ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "lint": "eslint --fix --ext .js,.jsx .",
     "test": "react-scripts test",
@@ -53,6 +56,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0"
   }
 }
