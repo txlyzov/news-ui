@@ -1,0 +1,85 @@
+@use "sass:map";
+@import "./../../../utils/Breakpoints.scss";
+@import "./../../../utils/Colors.scss";
+@import "./../../../utils/Styles.scss";
+
+.main-page__page-wraper {
+  .main-page__content-wraper {
+    .main-page {
+      &__left-side.dashboard {
+        @include flex-center-styles();
+        flex-direction: column;
+
+        .dashboard__update-button {
+          margin: 10px auto;
+
+          .dashboard__loader {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &__right-side.news-list {
+        @include flex-center-styles();
+        flex-direction: column;
+
+        .news-list__list {
+          width: 100%;
+          max-height: 80vh;
+          overflow-y: auto;
+
+          .news-list__row {
+            cursor: default;
+
+            .news-list__item {
+              flex-direction: column;
+
+              .news-list {
+                &__text {
+                  .MuiListItemText-primary {
+                    .news-list__title-wrapper {
+                      & .news-list__item-title .news-list__link-to-item {
+                        text-decoration: none;
+                        color: $c-black-100;
+                        transition: 0.25s;
+                      }
+
+                      &:hover .news-list__item-title .news-list__link-to-item {
+                        @include text-stroke(0.75px, $c-black-100);
+                        color: $c-white-100;
+                        padding-left: 36px;
+
+                        &:before {
+                          margin-right: 5px;
+                          position: absolute;
+                          left: 16px;
+                          content: "TO: ";
+                        }
+                      }
+                    }
+                  }
+
+                  .MuiListItemText-secondary .news-list__creator-link {
+                    text-decoration: none;
+                    color: $c-red-100;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: map.get($grid-breakpoints, md)) {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+    }
+
+    @media screen and (min-width: map.get($grid-breakpoints, xs)) and (max-width: (map.get($grid-breakpoints, md) - 0.02px)) {
+      @include flex-center-styles();
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
